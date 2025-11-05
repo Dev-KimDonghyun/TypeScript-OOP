@@ -1,0 +1,25 @@
+{
+  "name": "typescript-oop",
+  "version": "1.0.0",
+  "description": "Object-Oriented Programming study with Typescript",
+  "keywords": [
+    "node",
+    "typescript",
+    "oop"
+  ],
+  "homepage": "https://github.com/Dev-KimDonghyun/TypeScript-OOP#readme",
+  "bugs": {
+    "url": "https://github.com/Dev-KimDonghyun/TypeScript-OOP/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dev-KimDonghyun/TypeScript-OOP.git"
+  },
+  "license": "MIT",
+  "author": "KimDonghyun",
+  "type": "commonjs",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "ts-node src/index.ts"
+  }
+}
