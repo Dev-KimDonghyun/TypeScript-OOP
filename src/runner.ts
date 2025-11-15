@@ -7,14 +7,14 @@ export const runner = () => {
     console.log(`============== Item Management System RUN ==============`);
 
     // 물건 생성 - 객체 생성
-    const item01 = new Item(`Apple MacBook Air`, 1590000, 1);
-    const item02 = new Item(`BridgeStone All-Weather Tire`, 225000, 4);
+    const item01: Item = new Item(`Apple MacBook Air`, 1590000, 1);
+    const item02: Item = new Item(`BridgeStone All-Weather Tire`, 225000, 4);
 
     // 메서드 호출
     console.log(`현재 카트 물품: ${item01.getName()}, ${item02.getName()}`);
 
-    const formattedNumber01 = item01.getPrice().toLocaleString("ko-KR");
-    const formattedNumber02 = item02.getPrice().toLocaleString("ko-KR");
+    const formattedNumber01: string = item01.getPrice().toLocaleString("ko-KR");
+    const formattedNumber02: string = item02.getPrice().toLocaleString("ko-KR");
 
     console.log(`각각의 가격: ₩${formattedNumber01}, ₩${formattedNumber02}`);
     console.log(
@@ -28,10 +28,10 @@ export const runner = () => {
     console.log(`BridgeStone All-Weather Tire의 수량을 2개로 변경`);
 
     // 수량 변경 후 합계 출력
-    const item01Total = item01.calculateTotal();
-    const item02Total = item02.calculateTotal();
+    const item01Total: number = item01.calculateTotal();
+    const item02Total: number = item02.calculateTotal();
 
-    let total = (item01Total + item02Total).toLocaleString("ko-KR");
+    let total: string = (item01Total + item02Total).toLocaleString("ko-KR");
 
     console.log(
         `Apple MacBook Air의 총액: ${item01Total.toLocaleString("ko-KR")}`
