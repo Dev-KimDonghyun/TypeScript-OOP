@@ -31,7 +31,7 @@ export const runner = () => {
     const item01Total: number = item01.calculateTotal();
     const item02Total: number = item02.calculateTotal();
 
-    let total: string = (item01Total + item02Total).toLocaleString("ko-KR");
+    const total: string = (item01Total + item02Total).toLocaleString("ko-KR");
 
     console.log(
         `Apple MacBook Air의 총액: ${item01Total.toLocaleString("ko-KR")}`
