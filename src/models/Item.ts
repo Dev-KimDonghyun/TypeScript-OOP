@@ -26,7 +26,9 @@ export class Item {
         this._price = price;
         this._quantity = quantity;
         console.log(
-            `✅ 물품 [${this._name} (₩${this._price})]이(가) [${this._quantity}개] 추가되었습니다.`
+            `✅ 물품 [${this._name} (₩${this._price.toLocaleString(
+                "ko-KR"
+            )})]이(가) [${this._quantity}개] 추가되었습니다.`
         );
     }
 

@@ -12,7 +12,11 @@ export const runner = () => {
 
     // 메서드 호출
     console.log(`현재 카트 물품: ${item01.getName()}, ${item02.getName()}`);
-    console.log(`각각의 가격: ₩${item01.getPrice()}, ₩${item02.getPrice()}`);
+
+    const formattedNumber01 = item01.getPrice().toLocaleString("ko-KR");
+    const formattedNumber02 = item02.getPrice().toLocaleString("ko-KR");
+
+    console.log(`각각의 가격: ₩${formattedNumber01}, ₩${formattedNumber02}`);
     console.log(
         `각각의 수량: ${item01.getQuantity()}개, ${item02.getQuantity()}개`
     );
@@ -26,10 +30,17 @@ export const runner = () => {
     // 수량 변경 후 합계 출력
     const item01Total = item01.calculateTotal();
     const item02Total = item02.calculateTotal();
-    const total = item01Total + item02Total;
 
-    console.log(`Apple MacBook Air의 총액: ${item01Total}`);
-    console.log(`BridgeStone All-Weather Tire의 총액: ${item02Total}`);
+    let total = (item01Total + item02Total).toLocaleString("ko-KR");
+
+    console.log(
+        `Apple MacBook Air의 총액: ${item01Total.toLocaleString("ko-KR")}`
+    );
+    console.log(
+        `BridgeStone All-Weather Tire의 총액: ${item02Total.toLocaleString(
+            "ko-KR"
+        )}`
+    );
     console.log(`모든 상품의 총액: ${total}`);
 
     console.log(`============== Item Management System END ==============`);
