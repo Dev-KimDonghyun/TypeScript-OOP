@@ -22,10 +22,15 @@ export const runner = () => {
     );
 
     // 메서드를 통한 수량 변경
-    item01.setQuantity(4);
-    console.log(`Apple MacBook Air의 수량을 4개로 변경`);
-    item02.setQuantity(2);
-    console.log(`BridgeStone All-Weather Tire의 수량을 2개로 변경`);
+    const item01Quantity = 4;
+    const item02Quantity = 2;
+
+    item01.setQuantity(item01Quantity);
+    console.log(`Apple MacBook Air의 수량을 ${item01Quantity}개로 변경`);
+    item02.setQuantity(item02Quantity);
+    console.log(
+        `BridgeStone All-Weather Tire의 수량을 ${item02Quantity}개로 변경`
+    );
 
     // 수량 변경 후 합계 출력
     const item01Total: number = item01.calculateTotal();
